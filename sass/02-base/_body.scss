@@ -12,3 +12,10 @@ a {
     text-decoration: none;
     color: #222;
 }
+
+@media only screen and (max-width: 1278px) {
+    body {
+        overflow-y:auto;
+        
+    }
+}
