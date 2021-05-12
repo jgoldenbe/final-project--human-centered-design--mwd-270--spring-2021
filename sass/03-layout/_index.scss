@@ -39,7 +39,7 @@
 
 //Change background color of header after first scroll
 .header-background-color {
-    background-color: rgba(0, 0, 0, 0.98);
+    background-color: rgba(0, 0, 0, 1);
     transition-duration: 500ms;
 }
 
@@ -63,8 +63,11 @@
     background-size: cover;
     display: flex;
     margin-top: 50px;
+    height: 100vh;
 
     #container-headshot {
+        margin-top: auto;
+
         img {
             width: 480px;
             opacity: .35;
@@ -98,24 +101,99 @@
 }
 
 #container-portfolio {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.85) 70%, rgba(0, 0, 0, 1) 100%), url(../img/portfolio-background.jpg);
+    background-size: cover;
     margin: auto;
+    height: 100vh;
 
-    #portfolio-row {
+    h2 {
+        font-size: 48px;
+        text-align: center;
+        padding: 150px 50px 0;
+    }
+    
+    #row-1 {
+        margin: 50px auto 0;
+    }
+
+    #row-2 {
+        margin: 0 auto 50px;
+    }
+
+    .portfolio-row {
         display: flex;
+        background-color: #fff;
+        padding: 50px 50px;
+        width: 80vw;
+        border-radius: 5px;
 
         .column {
             max-width: 500px;
 
-            img {
-                width: 400px;
+            .content {
+                img {
+                    width: 100%;
+                    height: 167px;
+                }
+                
+                p {
+                    color: #222;
+                    margin: 0 20px 0 0;
+                }
+
+                h3 {
+                    margin: 20px 0;
+                    font-weight: 700;
+                }
             }
         }
+
         :first-child {
             margin-left: auto;
         }
 
         :last-child {
             margin-right: auto;
+        }
+    }
+}
+
+#container-contact {
+    height: 100vh;
+
+    h2 {
+        font-size: 48px;
+        padding: 250px 0 0 100px;
+        margin-bottom: 25px;
+    }
+
+    #container-social {
+        display: flex;
+        flex-direction: column;
+        width:75px;
+
+        a {
+            margin: 25px 0 20px 100px;
+
+            img {
+                width: 75px;
+                opacity: .6;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1870px) {
+    #container-portfolio {
+        .portfolio-row {
+            .column {
+                .content {
+                    width: 26.5vw;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
