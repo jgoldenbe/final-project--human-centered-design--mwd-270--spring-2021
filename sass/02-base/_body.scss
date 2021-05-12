@@ -13,6 +13,16 @@ a {
     color: #222;
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Oxygen', sans-serif;
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 @media only screen and (max-width: 1278px) {
     body {
         overflow-y:auto;
